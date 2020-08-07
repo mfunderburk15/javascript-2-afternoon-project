@@ -127,19 +127,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-function divider(argument, numbersArray){
-  //let even = [];
-  //let odd= [];
+function divider(numbersArray){
   let yo = [[],[]];
-  for(i=0; i < numbersArray.length; i++)
-  if(numbersArray % 2 === 0){
-    yo[0].push(numbersArray[i]);
-  }else{
-    yo[1].push(numbersArray[i]);
+  for(i=0; i < numbersArray.length; i++){
+    console.log(numbersArray[i] % 2 === 0 );
+    console.log(numbersArray[i] % 2 === 0 );
+    if(numbersArray[i] % 2 === 0){
+      yo[0].push(numbersArray[i]);
+    }else{
+      yo[1].push(numbersArray[i]);
+    }
   }
-  
   return yo;
-  
 }
 
 
@@ -151,8 +150,8 @@ var getRandomArbitrary = function() {
 };
 // Do not edit the code above.
 
-/* 
-  var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+
+  /*var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
   Above you're given a function (getRandomArbitrary) that will return a random number between 0 and 30.
   There is also a commented out array full of numbers to help you visualize what your function will be receiving.
   Write a function named finder that will take in an array as an argument.
@@ -162,6 +161,14 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(array){
+  let randomNumber = getRandomArbitrary();
+  if(array.includes(randomNumber)){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 
 
